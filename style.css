@@ -1,0 +1,223 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header {
+    background-color: #ff8080;
+    text-transform: uppercase;
+    font-weight: bold;
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    font-size: 1rem;
+    /* height: 10vh; */
+}
+
+.header p a:hover {
+    text-decoration: underline yellow;
+}
+
+.title {
+    background-color: #00b300;
+    color: #fff;
+    background-image: linear-gradient(#ff9999, #ffff99);
+    grid-column: 1 / 13;
+    position: relative;
+    height: 100vh;
+}
+
+.title h1 {
+    font-family: 'Playball', cursive;
+    font-size: 3rem;
+    position: absolute;
+    width: 100%;
+    top: 15vh;
+}
+
+.title h2 {
+    font-family: 'Oleo Script', cursive;
+    font-size: 5rem;
+    position: absolute;
+    top: 25vh;
+    width: 100%;
+}
+
+.title h3 {
+    width: 100%;
+    top: 40vh;
+    position: absolute;
+    font-family: 'arial', cursive;
+    text-transform: uppercase;
+    font-size: 7rem;
+    color: rgba(255, 255, 255, .1);
+    background-image: url("splash of colors.jpg");
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: movement 5s linear infinite;
+    border-bottom: 2px dotted white;
+}
+
+@keyframes movement {
+    0% {
+        background-position: left 0px top 10px;
+    }
+
+    100% {
+        background-position: left 200px top 10px;
+    }
+}
+
+.brush_background {
+    width: 100%;
+    opacity: 0.2;
+    z-index: 1;
+    height: 100vh;
+}
+
+.content {
+    grid-column: 1 / 13;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    top: 110vh;
+    margin: 0;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+    grid-gap: 2rem;
+    padding: 50px;
+    justify-items: center;
+}
+
+.portfolio img {
+    height: 220px;
+    -webkit-box-shadow: 10px 20px 50px -23px rgba(69, 17, 82, 0.44);
+    -moz-box-shadow: 10px 20px 50px -23px rgba(69, 17, 82, 0.44);
+    box-shadow: 10px 20px 50px -23px rgba(69, 17, 82, 0.44);
+}
+
+.content h4 {
+    color: black;
+    text-align: center;
+    font-family: 'Playball', cursive;
+    font-size: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.content h5 {
+    font-weight: bold;
+    color: black;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 4px;
+    line-height: normal;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.content h6 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.content h7 {
+    font-weight: bold;
+    color: #ff9999;
+}
+
+.content p {
+    text-decoration: underline;
+    text-decoration-color: #ff9999;
+    text-align: center;
+    margin-top: 0;
+}
+
+.content_list {
+    text-align: center;
+    list-style-position: inside;
+    line-height: 25px;
+}
+
+.content_marki {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    grid-gap: 10px;
+    padding: 50px;
+    justify-items: center;
+}
+
+.content_marki img {
+    width: 120px;
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 700px) {
+    .title h1 {
+        font-size: 2rem;
+    }
+
+    .title h2 {
+        font-size: 3rem;
+    }
+
+    .title h3 {
+        font-size: 4rem;
+    }
+
+    .content_marki img {
+        width: 80px;
+    }
+
+    .header {
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .title h1 {
+        font-size: 2rem;
+    }
+
+    .title h2 {
+        font-size: 3rem;
+    }
+
+    .title h3 {
+        font-size: 4rem;
+    }
+}
+
+.icons {
+    display: grid;
+    grid-gap: 0.3em;
+    justify-items: center;
+}
